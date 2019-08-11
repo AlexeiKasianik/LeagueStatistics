@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LeagueStatistics</string>
+    <string name="list_free_champions">Список бесплатных чемпионов</string>
+    <string name="show_statistics_selected_games">Посмотреть статистику отобранных игр</string>
+    <string name="enter_name_summoner">Введите имя призывателя</string>
+    <string name="show_list_games">Показать список игр</string>
+    <string name="back_button">Назад</string>
 </resources>
