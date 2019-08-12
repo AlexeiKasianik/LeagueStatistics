@@ -5,4 +5,14 @@
     <string name="enter_name_summoner">Введите имя призывателя</string>
     <string name="show_list_games">Показать список игр</string>
     <string name="back_button">Назад</string>
+    <string name="middleGold">Среднее золото</string>
+    <string name="middleDamege">Средний урон</string>
+    <string name="middleLvl">Средний уровень</string>
+    <string name="middleWards">Ср. показатель обзора</string>
+    <string name="middleKda">Средний KDA</string>
+    <string name="middle_kills">Ср. количество убийств</string>
+    <string name="middle_death">Ср. количество смертей</string>
+    <string name="middle_assist">Ср. количество содействий</string>
+    <string name="_0">0</string>
+    <string name="list_selected_games_button">Список отобранных игр</string>
 </resources>

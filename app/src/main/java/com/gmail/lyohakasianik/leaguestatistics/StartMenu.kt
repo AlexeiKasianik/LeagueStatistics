@@ -9,12 +9,12 @@ class StartMenu : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_menu_start)
+        setContentView(R.layout.layout_statistics_selected_games)
 
-        buttonShowFreeChampions.setOnClickListener {
+      /*  buttonShowFreeChampions.setOnClickListener {
             val intent = Intent(this, ListFreeChampionsActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
     }
 }

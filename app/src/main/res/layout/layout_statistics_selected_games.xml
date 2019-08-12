@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="4"
+                android:background="@drawable/blue_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewGold"
+                    style="@style/statisticsTextView"
+                    android:text="@string/middleGold" />
+
+                <TextView
+                    android:id="@+id/textViewDamage"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewGold"
+                    android:text="@string/middleDamege" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleLvl"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewDamage"
+                    android:text="@string/middleLvl" />
+
+                <TextView
+                    android:id="@+id/textViewWards"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewMiddleLvl"
+                    android:text="@string/middleWards" />
+
+                <TextView
+                    android:id="@+id/textViewKda"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewWards"
+                    android:text="@string/middleKda" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleKills"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewKda"
+                    android:text="@string/middle_kills" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleDeath"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewMiddleKills"
+                    android:text="@string/middle_death" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleAssist"
+                    style="@style/statisticsTextView"
+                    android:layout_below="@+id/textViewMiddleDeath"
+                    android:text="@string/middle_assist" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_weight="3"
+                android:background="@drawable/pink_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewGoldNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewDamegeNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewLvlNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewWardsNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewKdaNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleKillsNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleDeathNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/textViewMiddleAssistNumber"
+                    style="@style/statisticsTextView"
+                    android:text="@string/_0" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center">
+
+                <Button
+                    style="@style/buttonStartMenu"
+                    android:text="@string/list_selected_games_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/buttonBackStatisticsSelectedChampions"
+                    style="@style/buttonBack" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
