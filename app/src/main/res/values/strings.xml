@@ -15,4 +15,13 @@
     <string name="middle_assist">Ср. количество содействий</string>
     <string name="_0">0</string>
     <string name="list_selected_games_button">Список отобранных игр</string>
+    <string name="assist">Содействий</string>
+    <string name="death">Смертей</string>
+    <string name="kills">Убийств</string>
+    <string name="kda">KDA</string>
+    <string name="visibility">обзора</string>
+    <string name="indicator">Показатель</string>
+    <string name="lvl">Уровень</string>
+    <string name="damage">Урон</string>
+    <string name="gold">Золото</string>
 </resources>
