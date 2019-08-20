@@ -133,6 +133,553 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textViewStatisticGameTimeTwo"
             app:layout_constraintStart_toStartOf="@+id/textViewStatisticGameKda" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            style="@style/linearLayoutStatisticGameBig"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewStatisticGameFife">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameNull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <ImageView
+                    android:id="@+id/imageViewStatisticGameSix"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <ImageView
+                    android:id="@+id/imageViewStatisticGameSeven"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <ImageView
+                    android:id="@+id/imageViewStatisticGameEight"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <ImageView
+                    android:id="@+id/imageViewStatisticGameNine"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <ImageView
+                    android:id="@+id/imageViewStatisticGameTen"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            style="@style/linearLayoutStatisticGameBig"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameGold"
+                    style="@style/textViewStatisticGame"
+                    android:text="Золото" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameGoldOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameGoldTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameGoldThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameGoldFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameGoldFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            style="@style/linearLayoutStatisticGameBig"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDamage"
+                    style="@style/textViewStatisticGame"
+                    android:text="Урон" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDamageOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDamageTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDamageThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDamageFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDamageFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            style="@style/linearLayoutStatisticGameBig"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameLvl"
+                    style="@style/textViewStatisticGame"
+                    android:text="Уровень" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameLvlOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameLvlTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameLvlThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameLvlFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameLvlFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            style="@style/linearLayoutStatisticGameBig"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameVisibility"
+                    style="@style/textViewStatisticGame"
+                    android:text="Показатель обзора" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameVisibilityOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameVisibilityTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameVisibilityThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameVisibilityFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameVisibilityFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            style="@style/linearLayoutStatisticGameBig"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKdaStatistics"
+                    style="@style/textViewStatisticGame"
+                    android:text="KDA" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKdaOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKdaTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKdaThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKdaFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKdaFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            style="@style/linearLayoutStatisticGameBig"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKills"
+                    style="@style/textViewStatisticGame"
+                    android:text="Убийств" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKillsOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKillsTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKillsThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKillsFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameKillsFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            style="@style/linearLayoutStatisticGameBig"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDeath"
+                    style="@style/textViewStatisticGame"
+                    android:text="Смертей" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDeathOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDeathTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDeathThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDeathFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameDeathFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linearLayoutStatisticGameBig"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+            <LinearLayout
+                style="@style/linearLayoutStatisticGameMini"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameAssists"
+                    style="@style/textViewStatisticGame"
+                    android:text="Содействий" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameAssistsOne"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameAssistsTwo"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameAssistsThree"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameAssistsFour"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayoutStatisticGameMini">
+
+                <TextView
+                    android:id="@+id/textViewStatisticGameAssistsFife"
+                    style="@style/textViewStatisticGame"
+                    android:text="@string/_0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
