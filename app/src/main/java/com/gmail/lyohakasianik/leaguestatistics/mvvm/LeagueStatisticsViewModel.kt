@@ -57,7 +57,7 @@ class LeagueStatisticsViewModel : ViewModel() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { data ->
-                matchList.add(Match(data.teams, data.participants))
+                matchList.add(Match(gameId, data.teams, data.participants))
                 state.value = MVVMState.Data(matchList)
             }
     }
