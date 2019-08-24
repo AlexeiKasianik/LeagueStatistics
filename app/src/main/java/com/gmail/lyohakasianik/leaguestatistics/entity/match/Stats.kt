@@ -5,32 +5,32 @@ import com.google.gson.annotations.SerializedName
 data class Stats(
 
     @SerializedName("goldEarned")
-    val goldEarned: Int,
+    var goldEarned: Int,
 
     @SerializedName("totalDamageDealtToChampions")
-    val totalDamageDealtToChampions: Long,
+    var totalDamageDealtToChampions: Long,
 
     @SerializedName("champLevel")
-    val champLevel: Int,
+    var champLevel: Int,
 
     @SerializedName("visionScore")
-    val visionScore: Long,
+    var visionScore: Long,
 
     @SerializedName("kills")
-    val kills: Int,
+    var kills: Int,
 
     @SerializedName("deaths")
-    val deaths: Int,
+    var deaths: Int,
 
     @SerializedName("assists")
-    val assists: Int,
+    var assists: Int,
 
     @SerializedName("win")
-    val win: Boolean,
+    var win: Boolean,
 
     @SerializedName("neutralMinionsKilled")
-    val neutralMinionsKilled: Int,
+    var neutralMinionsKilled: Int,
 
     @SerializedName("totalMinionsKilled")
-    val totalMinionsKilled: Int
+    var totalMinionsKilled: Int
     )

@@ -5,21 +5,21 @@ import com.google.gson.annotations.SerializedName
 data class Participant(
 
     @SerializedName("spell1Id")
-    val spell1Id: Int,
+    var spell1Id: Int,
 
     @SerializedName("spell2Id")
-    val spell2Id: Int,
+    var spell2Id: Int,
 
     @SerializedName("participantId")
-    val participantId: Int,
+    var participantId: Int,
 
     @SerializedName("teamId")
-    val teamId: Int,
+    var teamId: Int,
 
     @SerializedName("championId")
-    val championId: Int,
+    var championId: Int,
 
 
     @SerializedName("stats")
-    val stats: Stats
+    var stats: Stats
 )

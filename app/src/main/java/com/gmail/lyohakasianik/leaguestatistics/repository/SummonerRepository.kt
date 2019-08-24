@@ -1,17 +1,8 @@
 package com.gmail.lyohakasianik.leaguestatistics.repository
 
+import com.gmail.lyohakasianik.leaguestatistics.entity.summoner.Summoner
+import io.reactivex.Single
+
 interface SummonerRepository {
-    fun getSummoner(name: String, apiKey: String, listener: SummonerResult)
-}
-
-interface SummonerResult {
-    fun onDataReady(
-        accountId: String,
-        name: String,
-        profileIconId: Int,
-        summonerLevel: Int
-    )
-
-    fun onError(throwable: Throwable)
-
+    fun getSummoner(name: String, apiKey: String): Single<Summoner>
 }
