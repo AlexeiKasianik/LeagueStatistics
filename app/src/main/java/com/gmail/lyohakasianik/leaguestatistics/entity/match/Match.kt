@@ -1,20 +1,27 @@
 package com.gmail.lyohakasianik.leaguestatistics.entity.match
 
-import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-
-const val POI_TABLE_NAME = "MatchDb"
 
 data class Match(
 
-    @PrimaryKey
-    var idMatch: Long,
+    val idSummonerInGame: Int,
+
+    val nameSummoner: String,
+
+    val idMatch: Long,
+
+    @SerializedName("participantIdentities")
+    val participantIdentities: List<ParticipantIdentitie>,
 
     @SerializedName("teams")
-    var teams: List<Team>?,
+    val teams: List<Team>?,
 
     @SerializedName("participants")
-    var participants: List<Participant>?
+    val participants: List<Participant>?,
 
+    @SerializedName("gameDuration")
+    val gameDuration: Long,
 
+    @SerializedName("gameCreation")
+    val gameCreation: Long
 )

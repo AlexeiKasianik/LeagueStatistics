@@ -1,5 +1,6 @@
 package com.gmail.lyohakasianik.leaguestatistics.entity.summoner
 
+import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import com.google.gson.annotations.SerializedName
 
 data class Summoner(

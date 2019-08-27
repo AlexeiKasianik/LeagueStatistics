@@ -19,5 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListFreeChampionsActivity" />
+        <activity android:name=".ListGamesActivity" />
+        <activity android:name=".GameStatisticsActivity" />
     </application>
 </manifest>
