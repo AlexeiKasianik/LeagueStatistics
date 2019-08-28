@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName
 data class Player(
 
     @SerializedName("summonerName")
-    val summonerName: String,
+    val summonerName: String = "",
 
     @SerializedName("profileIcon")
-    val profileIcon: Int,
+    val profileIcon: Int = 0,
 
     @SerializedName("summonerId")
-    val summonerId: String
+    val summonerId: String = ""
 )

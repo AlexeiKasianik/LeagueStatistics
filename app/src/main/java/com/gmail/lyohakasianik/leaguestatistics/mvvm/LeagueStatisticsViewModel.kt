@@ -1,6 +1,5 @@
 package com.gmail.lyohakasianik.leaguestatistics.mvvm
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gmail.lyohakasianik.leaguestatistics.END_INDEX
