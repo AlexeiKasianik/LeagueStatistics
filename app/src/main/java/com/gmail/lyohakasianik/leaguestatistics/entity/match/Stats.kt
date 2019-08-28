@@ -5,32 +5,32 @@ import com.google.gson.annotations.SerializedName
 data class Stats(
 
     @SerializedName("goldEarned")
-    var goldEarned: Int = 0,
+    var goldEarned: Int,
 
     @SerializedName("totalDamageDealtToChampions")
-    var totalDamageDealtToChampions: Long = 0,
+    var totalDamageDealtToChampions: Long,
 
     @SerializedName("champLevel")
-    var champLevel: Int = 0,
+    var champLevel: Int,
 
     @SerializedName("visionScore")
-    var visionScore: Long = 0,
+    var visionScore: Long,
 
     @SerializedName("kills")
-    var kills: Int = 0,
+    var kills: Int,
 
     @SerializedName("deaths")
-    var deaths: Int = 0,
+    var deaths: Int,
 
     @SerializedName("assists")
-    var assists: Int = 0,
+    var assists: Int,
 
     @SerializedName("win")
-    var win: Boolean = true,
+    var win: Boolean,
 
     @SerializedName("neutralMinionsKilled")
-    var neutralMinionsKilled: Int = 0,
+    var neutralMinionsKilled: Int,
 
     @SerializedName("totalMinionsKilled")
-    var totalMinionsKilled: Int = 0
+    var totalMinionsKilled: Int
     )

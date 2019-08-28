@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class ParticipantIdentitie(
 
     @SerializedName("player")
-    val player: Player = Player("",0,""),
+    val player: Player,
 
     @SerializedName("participantId")
-    val participantId: Int = 0
+    val participantId: Int
 )

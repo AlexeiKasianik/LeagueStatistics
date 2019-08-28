@@ -5,21 +5,21 @@ import com.google.gson.annotations.SerializedName
 data class Participant(
 
     @SerializedName("spell1Id")
-    var spell1Id: Int = 0,
+    var spell1Id: Int,
 
     @SerializedName("spell2Id")
-    var spell2Id: Int = 0,
+    var spell2Id: Int,
 
     @SerializedName("participantId")
-    var participantId: Int = 0,
+    var participantId: Int,
 
     @SerializedName("teamId")
-    var teamId: Int = 0,
+    var teamId: Int,
 
     @SerializedName("championId")
-    var championId: Int = 0,
+    var championId: Int,
 
 
     @SerializedName("stats")
-    var stats: Stats = Stats(0,0,0,0,0,0,0,true,0,0)
+    var stats: Stats
 )

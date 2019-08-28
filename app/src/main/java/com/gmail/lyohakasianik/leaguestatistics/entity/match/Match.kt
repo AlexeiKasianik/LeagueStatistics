@@ -10,27 +10,27 @@ import com.google.gson.annotations.SerializedName
 data class Match(
 
     @PrimaryKey
-    val idSummonerInGame: Int? = 0,
+    val idSummonerInGame: Int?,
 
-    val nameSummoner: String? = "",
+    val nameSummoner: String?,
 
-    val idMatch: Long? = 0,
+    val idMatch: Long?,
 
     @Embedded
     @SerializedName("participantIdentities")
-    val participantIdentities: List<ParticipantIdentitie>? = mutableListOf(),
+    val participantIdentities: List<ParticipantIdentitie>?,
 
     @Embedded
     @SerializedName("teams")
-    val teams: List<Team>? = mutableListOf(),
+    val teams: List<Team>?,
 
     @Embedded
     @SerializedName("participants")
-    val participants: List<Participant>? = mutableListOf(),
+    val participants: List<Participant>?,
 
     @SerializedName("gameDuration")
-    val gameDuration: Long? = 0,
+    val gameDuration: Long?,
 
     @SerializedName("gameCreation")
-    val gameCreation: Long? = 0
+    val gameCreation: Long?
 )
