@@ -21,5 +21,6 @@
         <activity android:name=".ListFreeChampionsActivity" />
         <activity android:name=".ListGamesActivity" />
         <activity android:name=".GameStatisticsActivity" />
+        <activity android:name=".StatisticsGamesDb" />
     </application>
 </manifest>

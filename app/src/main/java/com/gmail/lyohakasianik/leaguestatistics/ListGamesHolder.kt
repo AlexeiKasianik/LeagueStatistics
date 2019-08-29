@@ -19,17 +19,17 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(match: Match, summonerName: String) {
         goldTextView.text =
-            match.participants!![returnPositionSummoner(match, summonerName)].stats.goldEarned.toString()
+            match.participants[returnPositionSummoner(match, summonerName)]?.stats?.goldEarned.toString()
         itemsTextView.text =
-            match.participants[returnPositionSummoner(match, summonerName)].stats.visionScore.toString()
+            match.participants[returnPositionSummoner(match, summonerName)]?.stats?.visionScore.toString()
         minionsItemTextView.text =
-            (match.participants[returnPositionSummoner(match, summonerName)].stats.neutralMinionsKilled
+            (match.participants[returnPositionSummoner(match, summonerName)]?.stats?.neutralMinionsKilled!!
                     + match.participants[returnPositionSummoner(
                 match,
                 summonerName
-            )].stats.totalMinionsKilled).toString()
+            )]?.stats!!.totalMinionsKilled).toString()
         damageItemTextView.text =
-            match.participants[returnPositionSummoner(match, summonerName)].stats.totalDamageDealtToChampions.toString()
+            match.participants[returnPositionSummoner(match, summonerName)]?.stats!!.totalDamageDealtToChampions.toString()
         gameTimerTextView.text = getTime(match.gameDuration)
 
         if (!returnTeam(match, (returnPositionSummoner(match, summonerName))+1)) {
@@ -42,9 +42,9 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun returnTeam(match: Match, summonerIdGame: Int): Boolean {
         var boolean: Boolean = true
-        for (item in match.participants!!) {
+        for (item in match.participants) {
             if (item.participantId == summonerIdGame)
-                boolean = item.stats.win
+                boolean = item.stats!!.win
         }
 
         return boolean
@@ -53,7 +53,7 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun returnPositionSummoner(match: Match, summonerName: String): Int {
         var positionSummoner = 0
         for (item in match.participantIdentities) {
-            if (item.player.summonerName == summonerName)
+            if (item.player?.summonerName == summonerName)
                 positionSummoner = item.participantId
         }
         return positionSummoner-1

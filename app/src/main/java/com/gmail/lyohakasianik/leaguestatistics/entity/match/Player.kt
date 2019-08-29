@@ -1,15 +1,16 @@
 package com.gmail.lyohakasianik.leaguestatistics.entity.match
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Player(
+open class Player(
 
     @SerializedName("summonerName")
-    val summonerName: String,
+    var summonerName: String? = "",
 
     @SerializedName("profileIcon")
-    val profileIcon: Int,
+    var profileIcon: Int? = 0,
 
     @SerializedName("summonerId")
-    val summonerId: String
-)
+    var summonerId: String? = ""
+) : RealmObject()

@@ -1,11 +1,13 @@
 package com.gmail.lyohakasianik.leaguestatistics.app
 
 import android.app.Application
-import androidx.room.Room
-import com.gmail.lyohakasianik.leaguestatistics.database.AppDatabase
+import com.gmail.lyohakasianik.leaguestatistics.MATCH_TABLE_NAME
+
+import io.realm.Realm
+import io.realm.RealmConfiguration
 
 class App : Application() {
-    private lateinit var database: AppDatabase
+    var config: RealmConfiguration? = null
 
     companion object {
 
@@ -16,13 +18,13 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        database = Room.databaseBuilder(this, AppDatabase::class.java, "name")
-            .fallbackToDestructiveMigration()
+
+
+        Realm.init(this)
+        config = RealmConfiguration.Builder()
+            .name(MATCH_TABLE_NAME)
+            .deleteRealmIfMigrationNeeded()
             .build()
+        Realm.setDefaultConfiguration(config)
     }
-
-    fun getDatabase(): AppDatabase {
-        return database
-    }
-
 }

@@ -1,36 +1,29 @@
 package com.gmail.lyohakasianik.leaguestatistics.entity.match
 
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import com.gmail.lyohakasianik.leaguestatistics.MATCH_TABLE_NAME
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmList
+import io.realm.RealmObject
 
-@Entity(tableName = MATCH_TABLE_NAME )
-data class Match(
+open class Match(
 
-    @PrimaryKey
-    val idSummonerInGame: Int?,
+    var idSummonerInGame: Int = 0,
 
-    val nameSummoner: String?,
+    var nameSummoner: String = "",
 
-    val idMatch: Long?,
+    var idMatch: Long? = 0,
 
-    @Embedded
     @SerializedName("participantIdentities")
-    val participantIdentities: List<ParticipantIdentitie>?,
+    var participantIdentities: RealmList<ParticipantIdentitie> = RealmList(),
 
-    @Embedded
     @SerializedName("teams")
-    val teams: List<Team>?,
+    var teams: RealmList<Team> = RealmList(),
 
-    @Embedded
     @SerializedName("participants")
-    val participants: List<Participant>?,
+    var participants: RealmList<Participant> = RealmList(),
 
     @SerializedName("gameDuration")
-    val gameDuration: Long?,
+    var gameDuration: Long = 0,
 
     @SerializedName("gameCreation")
-    val gameCreation: Long?
-)
+    var gameCreation: Long = 0
+):RealmObject()

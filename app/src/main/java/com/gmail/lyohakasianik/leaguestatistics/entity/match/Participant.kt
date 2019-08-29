@@ -1,25 +1,26 @@
 package com.gmail.lyohakasianik.leaguestatistics.entity.match
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class Participant(
+
+open class Participant(
 
     @SerializedName("spell1Id")
-    var spell1Id: Int,
+    var spell1Id: Int = 0,
 
     @SerializedName("spell2Id")
-    var spell2Id: Int,
+    var spell2Id: Int = 0,
 
     @SerializedName("participantId")
-    var participantId: Int,
+    var participantId: Int = 0,
 
     @SerializedName("teamId")
-    var teamId: Int,
+    var teamId: Int = 0,
 
     @SerializedName("championId")
-    var championId: Int,
-
+    var championId: Int = 0,
 
     @SerializedName("stats")
-    var stats: Stats
-)
+    var stats: Stats? = Stats()
+): RealmObject()

@@ -1,12 +1,13 @@
 package com.gmail.lyohakasianik.leaguestatistics.entity.match
 
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmObject
 
-data class ParticipantIdentitie(
+open class ParticipantIdentitie(
 
     @SerializedName("player")
-    val player: Player,
+    var player: Player? = Player(),
 
     @SerializedName("participantId")
-    val participantId: Int
-)
+    var participantId: Int = 0
+):RealmObject()

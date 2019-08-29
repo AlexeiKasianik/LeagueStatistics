@@ -1233,7 +1233,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout12311" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonAddGameInStatistic"
             style="@style/buttonBack"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"

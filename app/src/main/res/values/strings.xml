@@ -9,7 +9,7 @@
     <string name="middleDamege">Средний урон</string>
     <string name="middleLvl">Средний уровень</string>
     <string name="middleWards">Ср. показатель обзора</string>
-    <string name="middleKda">Средний KDA</string>
+    <string name="middleKda">Среднее кол-во миньёнов</string>
     <string name="middle_kills">Ср. количество убийств</string>
     <string name="middle_death">Ср. количество смертей</string>
     <string name="middle_assist">Ср. количество содействий</string>
@@ -24,4 +24,5 @@
     <string name="lvl">Уровень</string>
     <string name="damage">Урон</string>
     <string name="gold">Золото</string>
+    <string name="clearListDatabase">Очистить список</string>
 </resources>

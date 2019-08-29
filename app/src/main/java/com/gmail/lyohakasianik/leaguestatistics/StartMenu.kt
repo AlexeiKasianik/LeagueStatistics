@@ -2,10 +2,7 @@ package com.gmail.lyohakasianik.leaguestatistics
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
-import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import kotlinx.android.synthetic.main.layout_menu_start.*
 
 class StartMenu : FragmentActivity() {
@@ -22,6 +19,11 @@ class StartMenu : FragmentActivity() {
 
         buttonShowFreeChampions.setOnClickListener {
             val intent = Intent(this, ListFreeChampionsActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonShowStatistics.setOnClickListener {
+            val intent = Intent(this, StatisticsGamesDb::class.java)
             startActivity(intent)
         }
     }
