@@ -19,7 +19,6 @@ class App : Application() {
         super.onCreate()
         instance = this
 
-
         Realm.init(this)
         config = RealmConfiguration.Builder()
             .name(MATCH_TABLE_NAME)

@@ -3,7 +3,6 @@ package com.gmail.lyohakasianik.leaguestatistics.entity.match
 import com.google.gson.annotations.SerializedName
 import io.realm.RealmObject
 
-
 open class Participant(
 
     @SerializedName("spell1Id")

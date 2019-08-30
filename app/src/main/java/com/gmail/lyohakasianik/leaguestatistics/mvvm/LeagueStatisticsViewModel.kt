@@ -1,12 +1,17 @@
 package com.gmail.lyohakasianik.leaguestatistics.mvvm
 
+import android.content.Context
+import android.util.Log
+import android.widget.ImageView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.gmail.lyohakasianik.leaguestatistics.DatabaseIdIcon
 import com.gmail.lyohakasianik.leaguestatistics.END_INDEX
 import com.gmail.lyohakasianik.leaguestatistics.START_INDEX
 import com.gmail.lyohakasianik.leaguestatistics.app.App
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.ParticipantIdentitie
+import com.gmail.lyohakasianik.leaguestatistics.loadRoundImage
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideGamesIdRepository
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideMatchRepository
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideSummonerRepository
@@ -22,6 +27,8 @@ class LeagueStatisticsViewModel : ViewModel() {
     private var averagesList: MutableList<Long>? = null
     private var disposable: Disposable? = null
     private var realm: Realm = Realm.getInstance(App.instance.config)
+    private val url = "https://ddragon.leagueoflegends.com/cdn/9.17.1/img/champion/"
+    private val iconIdHashMap = DatabaseIdIcon()
 
     private val summonerRepository = provideSummonerRepository()
     private val matchesIdRepository = provideGamesIdRepository()
@@ -37,9 +44,11 @@ class LeagueStatisticsViewModel : ViewModel() {
                 .getSummoner(summonerName, apiKey)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe { data ->
+                .subscribe({ data ->
                     loadListId(summonerName, data.accountId, END_INDEX, START_INDEX, apiKey)
-                }
+                }, {
+                    state.value = MVVMState.Error(it)
+                })
         }
     }
 
@@ -48,11 +57,13 @@ class LeagueStatisticsViewModel : ViewModel() {
             .getGamesId(accountId, endIndex, startIndex, apiKey)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { data ->
+            .subscribe({ data ->
                 for (item in data.matchIdList) {
                     loadMatchInform(summonerName, item.gameId, apiKey)
                 }
-            }
+            }, {
+                state.value = MVVMState.Error(it)
+            })
     }
 
     fun loadMatchInform(summonerName: String, gameId: Long, apiKey: String) {
@@ -60,7 +71,7 @@ class LeagueStatisticsViewModel : ViewModel() {
             .getMatchInform(gameId, apiKey)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { data ->
+            .subscribe({ data ->
                 matchList.add(
                     Match(
                         returnPositionSummoner(data.participantIdentities, summonerName),
@@ -76,7 +87,9 @@ class LeagueStatisticsViewModel : ViewModel() {
 
                 matchList.sortBy { it.gameDuration }
                 state.value = MVVMState.Data(matchList)
-            }
+            }, {
+                state.value = MVVMState.Error(it)
+            })
     }
 
 
@@ -102,7 +115,7 @@ class LeagueStatisticsViewModel : ViewModel() {
         var kda = ""
         for (item in match.participants) {
             if (item.participantId == match.idSummonerInGame)
-                kda = "${item.stats!!.kills}/${item.stats!!.deaths}/${item.stats!!.deaths}"
+                kda = "${item.stats!!.kills}/${item.stats!!.deaths}/${item.stats!!.assists}"
         }
         return kda
     }
@@ -133,11 +146,7 @@ class LeagueStatisticsViewModel : ViewModel() {
     fun addGameInDb() {
         realm.executeTransaction {
             realm.insert(matchList[0])
-            val results: RealmResults<Match> = realm.where(Match::class.java).findAll()
-
-            /*realm!!.deleteAll()*/
         }
-
     }
 
     fun getMatchesDb() {
@@ -146,6 +155,25 @@ class LeagueStatisticsViewModel : ViewModel() {
             for (item in matchListDb!!) {
                 matchList.add(item)
             }
+        }
+        state.value = MVVMState.Data(matchList)
+    }
+
+    fun getMatchDb(idGame: String) {
+        getMatchesDb()
+        for (item in matchListDb!!) {
+            if (item.idMatch.toString() == idGame) {
+                matchList.clear()
+                matchList.add(item)
+            }
+        }
+    }
+
+    fun removeGameInDatabase(idGame: String) {
+        realm.executeTransaction {
+            val matches: RealmResults<Match> =
+                realm.where(Match::class.java).equalTo("idMatch", idGame.toInt()).findAll()
+            matches.deleteAllFromRealm()
         }
     }
 
@@ -175,17 +203,42 @@ class LeagueStatisticsViewModel : ViewModel() {
 
         val list: MutableList<Long> = mutableListOf(gold, damage, lvl, visibility, minions, kills, death, assists)
 
-        averagesList =  returnListAverages(list)
+        averagesList = returnListAverages(list)
         state.value = MVVMState.DataAverages(averagesList!!)
     }
 
     fun returnListAverages(list: MutableList<Long>): MutableList<Long> {
-        val newList: MutableList<Long> = mutableListOf()
+        val newList: MutableList<Long> = mutableListOf(0, 0, 0, 0, 0, 0, 0, 0)
 
-        for (item in list) {
-            newList.add(item / matchListDb!!.size)
+        if (matchListDb?.size != 0) {
+            newList.clear()
+            for (item in list) {
+                newList.add(item / matchListDb!!.size)
+            }
         }
         return newList
+    }
+
+    fun loadImage(listImageView: List<ImageView>, match: Match, context: Context) {
+
+
+        for ((count, item) in listImageView.withIndex()) {
+            loadRoundImage(
+                context,
+                url + iconIdHashMap.databaseIdIcon[match.participants[count]?.championId] + ".png",
+                item
+            )
+        }
+    }
+
+    fun loadimageSummoner(imageView: ImageView, match: Match, context: Context) {
+        var idChamp = 0
+
+        for (item in match.participants) {
+            if (item.participantId == match.idSummonerInGame)
+                idChamp = item.championId
+        }
+        loadRoundImage(context, url + iconIdHashMap.databaseIdIcon[idChamp] + ".png", imageView)
     }
 
     override fun onCleared() {

@@ -72,17 +72,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonShowListGames" />
 
-        <Button
-            android:id="@+id/buttonShowFreeChampions"
-            style="@style/buttonStartMenu"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/list_free_champions"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonShowStatistics" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -40,15 +40,11 @@ class CircleDiagram : View {
         defStyleRes
     )
 
-
     init {
-
         paint.style = Paint.Style.FILL
-
         textNumberPaint.color = ContextCompat.getColor(context, R.color.colorTextSearchSummoner)
         textNumberPaint.textSize = resources.getDimensionPixelSize(R.dimen.circle_diagram_text_size).toFloat()
         textNumberPaint.fontFeatureSettings = resources.getResourceName(R.font.comfortaa_regular)
-
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {

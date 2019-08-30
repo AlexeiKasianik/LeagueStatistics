@@ -1,10 +1,13 @@
-package com.gmail.lyohakasianik.leaguestatistics
+package com.gmail.lyohakasianik.leaguestatistics.ui
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.gmail.lyohakasianik.leaguestatistics.API_KEY
+import com.gmail.lyohakasianik.leaguestatistics.R
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import com.gmail.lyohakasianik.leaguestatistics.mvvm.LeagueStatisticsViewModel
 import com.gmail.lyohakasianik.leaguestatistics.mvvm.MVVMState
@@ -14,7 +17,7 @@ import kotlinx.android.synthetic.main.layout_game_statistics.*
 class GameStatisticsActivity : FragmentActivity() {
 
     private lateinit var viewModel: LeagueStatisticsViewModel
-
+    private lateinit var listImageView: List<ImageView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,34 +46,6 @@ class GameStatisticsActivity : FragmentActivity() {
         buttonAddGameInStatistic.setOnClickListener {
             viewModel.addGameInDb()
             Toast.makeText(this, "Игра была добавлена в список статистики", Toast.LENGTH_LONG).show()
-            /*realm.executeTransaction {
-                *//*realm.insert(match)
-                val results :RealmResults<Match> = realm.where(Match::class.java).findAll()
-                Log.e("ZXCv", results.size.toString() )
-                Log.e("ZXCv", results.size.toString() )*//*
-                realm.deleteAll()
-            }*/
-
-            /*realm.deleteAll()*/
-
-            /* var matchDb = realm.createObject(Match::class.java)
-             matchDb.nameSummoner = match.nameSummoner*/
-
-            /*Log.e("ZXCv", realm.toString())
-            realm.beginTransaction()
-            val results :RealmResults<TeamRealm> = realm.where(TeamRealm::class.java).findAll()
-            Log.e("ZXCv", results.size.toString() )
-            Log.e("ZXCv", results.toString() )
-            realm.insert(match)
-            Log.e("ZXCv", results.size.toString() )
-            realm.commitTransaction()*/
-
-            /* realm.beginTransaction()
-             realm.deleteAll()
-             results = realm.where(TeamRealm::class.java).findAll()
-
-             Log.e("ZXCv", results.toString() )
-             realm.commitTransaction()*/
         }
     }
 
@@ -131,6 +106,21 @@ class GameStatisticsActivity : FragmentActivity() {
             match.participants[9]!!.stats!!.totalMinionsKilled,
             match.participants[9]!!.stats!!.neutralMinionsKilled
         ).toString()
+
+        listImageView = listOf(
+            imageViewStatisticGameSix,
+            imageViewStatisticGameSeven,
+            imageViewStatisticGameEight,
+            imageViewStatisticGameNine,
+            imageViewStatisticGameTen,
+            imageViewStatisticGameEleven,
+            imageViewStatisticGameTwelve,
+            imageViewStatisticGameThirteen,
+            imageViewStatisticGameFourteen,
+            imageViewStatisticGameFifteen
+        )
+
+        viewModel.loadImage(listImageView, match, this)
 
         textViewStatisticGameGoldOne.text = match.participants[0]!!.stats!!.goldEarned.toString()
         textViewStatisticGameGoldTwo.text = match.participants[1]!!.stats!!.goldEarned.toString()

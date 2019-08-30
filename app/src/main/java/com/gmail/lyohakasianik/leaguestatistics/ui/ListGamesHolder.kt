@@ -1,11 +1,14 @@
-package com.gmail.lyohakasianik.leaguestatistics
+package com.gmail.lyohakasianik.leaguestatistics.ui
 
-import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.gmail.lyohakasianik.leaguestatistics.DatabaseIdIcon
+import com.gmail.lyohakasianik.leaguestatistics.R
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
+import com.gmail.lyohakasianik.leaguestatistics.loadRoundImage
 
 class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -15,7 +18,7 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val damageItemTextView = itemView.findViewById<TextView>(R.id.damageItemTextView)
     private val gameTimerTextView = itemView.findViewById<TextView>(R.id.gameTimerTextView)
     private val itemConstraintLayout = itemView.findViewById<ConstraintLayout>(R.id.itemConstraintLayout)
-
+    private val imageViewItemGame = itemView.findViewById<ImageView>(R.id.imageViewItemGame)
 
     fun bind(match: Match, summonerName: String) {
         goldTextView.text =
@@ -29,15 +32,23 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
                 summonerName
             )]?.stats!!.totalMinionsKilled).toString()
         damageItemTextView.text =
-            match.participants[returnPositionSummoner(match, summonerName)]?.stats!!.totalDamageDealtToChampions.toString()
+            match.participants[returnPositionSummoner(
+                match,
+                summonerName
+            )]?.stats!!.totalDamageDealtToChampions.toString()
         gameTimerTextView.text = getTime(match.gameDuration)
 
-        if (!returnTeam(match, (returnPositionSummoner(match, summonerName))+1)) {
+        if (!returnTeam(match, (returnPositionSummoner(match, summonerName)) + 1)) {
             itemConstraintLayout.setBackgroundResource(
                 R.drawable.pink_shape
-
             )
         }
+        loadRoundImage(
+            itemView.context, getImageUrl(
+                match,
+                (returnPositionSummoner(match, summonerName)) + 1
+            ), imageViewItemGame
+        )
     }
 
     fun returnTeam(match: Match, summonerIdGame: Int): Boolean {
@@ -46,8 +57,17 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
             if (item.participantId == summonerIdGame)
                 boolean = item.stats!!.win
         }
-
         return boolean
+    }
+
+    fun getImageUrl(match: Match, summonerIdGame: Int): String {
+        val url = "https://ddragon.leagueoflegends.com/cdn/9.17.1/img/champion/"
+        var idChamp = 0
+        val databaseIcon = DatabaseIdIcon()
+        for (item in match.participants)
+            if (item.participantId == summonerIdGame)
+                idChamp = item.championId
+        return url + "${databaseIcon.databaseIdIcon[idChamp]}.png"
     }
 
     fun returnPositionSummoner(match: Match, summonerName: String): Int {
@@ -56,7 +76,7 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
             if (item.player?.summonerName == summonerName)
                 positionSummoner = item.participantId
         }
-        return positionSummoner-1
+        return positionSummoner - 1
     }
 
     fun getTime(long: Long): String {
