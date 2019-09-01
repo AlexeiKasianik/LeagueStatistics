@@ -3,6 +3,9 @@
 ## Realm ReactiveX
 ## Custom View
 ## MVVM
+
+# Requirements
+#### To view the statistics of the games of the summoner, you need an Internet connection.
 ---
 ---
 ![1 1](https://user-images.githubusercontent.com/53992243/64075429-d9b7cf80-ccc0-11e9-876a-53a317ede30a.jpg)
