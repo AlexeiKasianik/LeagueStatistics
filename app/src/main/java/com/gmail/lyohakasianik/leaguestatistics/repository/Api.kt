@@ -1,4 +1,4 @@
-package com.gmail.lyohakasianik.leaguestatistics
+package com.gmail.lyohakasianik.leaguestatistics.repository
 
 import com.gmail.lyohakasianik.leaguestatistics.entity.gameId.AllMatchesId
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match

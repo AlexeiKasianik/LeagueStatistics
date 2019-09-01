@@ -1,7 +1,7 @@
 package com.gmail.lyohakasianik.leaguestatistics.app
 
 import android.app.Application
-import com.gmail.lyohakasianik.leaguestatistics.MATCH_TABLE_NAME
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.MATCH_TABLE_NAME
 
 import io.realm.Realm
 import io.realm.RealmConfiguration

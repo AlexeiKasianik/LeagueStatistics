@@ -1,4 +1,4 @@
-package com.gmail.lyohakasianik.leaguestatistics
+package com.gmail.lyohakasianik.leaguestatistics.databaseIcon
 
 class DatabaseIdIcon {
 

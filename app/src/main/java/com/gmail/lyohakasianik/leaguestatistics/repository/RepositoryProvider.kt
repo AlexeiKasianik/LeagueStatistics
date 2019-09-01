@@ -1,6 +1,6 @@
 package com.gmail.lyohakasianik.leaguestatistics.repository
 
-import com.gmail.lyohakasianik.leaguestatistics.BASE_URL
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.BASE_URL
 
 fun provideSummonerRepository(): SummonerRepository {
     return SummonerRepositoryRemote(

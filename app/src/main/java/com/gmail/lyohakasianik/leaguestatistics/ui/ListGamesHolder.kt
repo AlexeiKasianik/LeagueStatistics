@@ -5,10 +5,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.gmail.lyohakasianik.leaguestatistics.DatabaseIdIcon
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.DatabaseIdIcon
 import com.gmail.lyohakasianik.leaguestatistics.R
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
-import com.gmail.lyohakasianik.leaguestatistics.loadRoundImage
+import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImage
 
 class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
 

@@ -1,6 +1,5 @@
-package com.gmail.lyohakasianik.leaguestatistics
+package com.gmail.lyohakasianik.leaguestatistics.loadimage
 
-import android.app.Activity
 import android.content.Context
 import android.widget.ImageView
 import com.bumptech.glide.Glide

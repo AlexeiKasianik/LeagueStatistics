@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
-import com.gmail.lyohakasianik.leaguestatistics.DatabaseIdIcon
 import com.gmail.lyohakasianik.leaguestatistics.R
 import kotlinx.android.synthetic.main.layout_menu_start.*
 import java.util.regex.Pattern

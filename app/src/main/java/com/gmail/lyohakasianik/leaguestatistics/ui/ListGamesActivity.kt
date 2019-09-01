@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.gmail.lyohakasianik.leaguestatistics.API_KEY
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.API_KEY
 import com.gmail.lyohakasianik.leaguestatistics.R
 import com.gmail.lyohakasianik.leaguestatistics.customView.CircleDiagram
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match

@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.gmail.lyohakasianik.leaguestatistics.API_KEY
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.API_KEY
 import com.gmail.lyohakasianik.leaguestatistics.R
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import com.gmail.lyohakasianik.leaguestatistics.mvvm.LeagueStatisticsViewModel
@@ -30,7 +30,9 @@ class GameStatisticsActivity : FragmentActivity() {
         val summonerName = idAndName[1]
         val idGame = idAndName[0]
 
-        viewModel.loadMatchInform(summonerName, idGame.toLong(), API_KEY)
+        viewModel.loadMatchInform(summonerName, idGame.toLong(),
+            API_KEY
+        )
         viewModel.state.observe(this, Observer {
             when (it) {
                 is MVVMState.Data -> {

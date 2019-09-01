@@ -1,4 +1,4 @@
-package com.gmail.lyohakasianik.leaguestatistics
+package com.gmail.lyohakasianik.leaguestatistics.databaseIcon
 
 const val API_KEY = "RGAPI-346f7708-edfb-48f4-b4f5-af9637300eec"
 const val BASE_URL = "https://ru.api.riotgames.com/"

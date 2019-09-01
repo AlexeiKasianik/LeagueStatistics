@@ -1,6 +1,5 @@
 package com.gmail.lyohakasianik.leaguestatistics.repository
 
-import com.gmail.lyohakasianik.leaguestatistics.Api
 import com.gmail.lyohakasianik.leaguestatistics.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

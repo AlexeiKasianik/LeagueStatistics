@@ -1,17 +1,16 @@
 package com.gmail.lyohakasianik.leaguestatistics.mvvm
 
 import android.content.Context
-import android.util.Log
 import android.widget.ImageView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.gmail.lyohakasianik.leaguestatistics.DatabaseIdIcon
-import com.gmail.lyohakasianik.leaguestatistics.END_INDEX
-import com.gmail.lyohakasianik.leaguestatistics.START_INDEX
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.DatabaseIdIcon
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.END_INDEX
+import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.START_INDEX
 import com.gmail.lyohakasianik.leaguestatistics.app.App
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.ParticipantIdentitie
-import com.gmail.lyohakasianik.leaguestatistics.loadRoundImage
+import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImage
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideGamesIdRepository
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideMatchRepository
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideSummonerRepository
@@ -45,7 +44,9 @@ class LeagueStatisticsViewModel : ViewModel() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ data ->
-                    loadListId(summonerName, data.accountId, END_INDEX, START_INDEX, apiKey)
+                    loadListId(summonerName, data.accountId,
+                        END_INDEX,
+                        START_INDEX, apiKey)
                 }, {
                     state.value = MVVMState.Error(it)
                 })
@@ -238,7 +239,11 @@ class LeagueStatisticsViewModel : ViewModel() {
             if (item.participantId == match.idSummonerInGame)
                 idChamp = item.championId
         }
-        loadRoundImage(context, url + iconIdHashMap.databaseIdIcon[idChamp] + ".png", imageView)
+        loadRoundImage(
+            context,
+            url + iconIdHashMap.databaseIdIcon[idChamp] + ".png",
+            imageView
+        )
     }
 
     override fun onCleared() {

@@ -1,6 +1,5 @@
 package com.gmail.lyohakasianik.leaguestatistics.repository
 
-import com.gmail.lyohakasianik.leaguestatistics.Api
 import com.gmail.lyohakasianik.leaguestatistics.entity.gameId.AllMatchesId
 import io.reactivex.Single
 
