@@ -121,6 +121,7 @@ class GameStatisticsActivity : FragmentActivity() {
         )
 
         viewModel.loadImage(listImageView, match, this)
+        viewModel.loadimageSummoner(imageViewStatisticGameOne, match,this)
 
         textViewStatisticGameGoldOne.text = match.participants[0]!!.stats!!.goldEarned.toString()
         textViewStatisticGameGoldTwo.text = match.participants[1]!!.stats!!.goldEarned.toString()
