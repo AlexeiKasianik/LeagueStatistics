@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">LeagueStatistics</string>
+    <string name="list_free_champions">Список бесплатных чемпионов</string>
+    <string name="show_statistics_selected_games">Посмотреть статистику отобранных игр</string>
+    <string name="enter_name_summoner">Введите имя призывателя</string>
+    <string name="show_list_games">Показать список игр</string>
+    <string name="back_button">Назад</string>
+    <string name="middleGold">Среднее золото</string>
+    <string name="middleDamege">Средний урон</string>
+    <string name="middleLvl">Средний уровень</string>
+    <string name="middleWards">Ср. показатель обзора</string>
+    <string name="middleKda">Среднее кол-во миньёнов</string>
+    <string name="middle_kills">Ср. количество убийств</string>
+    <string name="middle_death">Ср. количество смертей</string>
+    <string name="middle_assist">Ср. количество содействий</string>
+    <string name="_0">0</string>
+    <string name="list_selected_games_button">Список отобранных игр</string>
+    <string name="assist">Содействий</string>
+    <string name="death">Смертей</string>
+    <string name="kills">Убийств</string>
+    <string name="kda">KDA</string>
+    <string name="visibility">обзора</string>
+    <string name="indicator">Показатель</string>
+    <string name="lvl">Уровень</string>
+    <string name="damage">Урон</string>
+    <string name="gold">Золото</string>
+    <string name="clearListDatabase">Очистить список</string>
+    <string name="deleteStatisticButton">Удалить из статистики</string>
 </resources>

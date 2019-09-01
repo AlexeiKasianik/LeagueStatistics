@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">LeagueStatistics</string>
+    <string name="list_free_champions">List of Free Champions</string>
+    <string name="show_statistics_selected_games">View statistics for selected games</string>
+    <string name="enter_name_summoner">Enter Summoner Name</string>
+    <string name="show_list_games">Show list of games</string>
+    <string name="back_button">Back</string>
+    <string name="middleGold">Medium gold</string>
+    <string name="middleDamege">Medium damage</string>
+    <string name="middleLvl">Medium lvl</string>
+    <string name="middleWards">Md. vision score</string>
+    <string name="middleKda">Average Minion</string>
+    <string name="middle_kills">Average kills</string>
+    <string name="middle_death">Average deaths</string>
+    <string name="middle_assist">Average assists</string>
+    <string name="_0">0</string>
+    <string name="list_selected_games_button">List of selected games</string>
+    <string name="assist">Assists</string>
+    <string name="death">Deatch</string>
+    <string name="kills">Kills</string>
+    <string name="kda">KDA</string>
+    <string name="visibility">visibility</string>
+    <string name="indicator">Indicator</string>
+    <string name="lvl">Lvl</string>
+    <string name="damage">Damage</string>
+    <string name="gold">Gold</string>
+    <string name="clearListDatabase">Clear list</string>
+    <string name="deleteStatisticButton">Remove from statistics</string>
+</resources>
