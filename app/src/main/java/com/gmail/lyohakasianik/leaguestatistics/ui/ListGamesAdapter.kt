@@ -29,11 +29,6 @@ class ListGamesAdapter(private var matches: MutableList<Match>, private val list
         return matches.size
     }
 
-    fun updateList(newItems: MutableList<Match>) {
-        matches = newItems
-        notifyDataSetChanged()
-    }
-
     interface onClickListener {
         fun onItemClick(item: Match)
     }

@@ -39,7 +39,7 @@ class StatisticsGamesDb : FragmentActivity() {
                 intent.putExtra("nameSummoner", "start database")
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "List games is empty", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Список сохранённых игр пуст", Toast.LENGTH_LONG).show()
             }
         }
     }

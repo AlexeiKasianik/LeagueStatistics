@@ -18,7 +18,7 @@ class StartMenu : FragmentActivity() {
 
         buttonShowListGames.setOnClickListener {
             if (!check(editText.text.toString())) {
-                Toast.makeText(this, "Summoner name is incorrect", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Извините. Имя призывателя введено некорректно", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Hello ${editText.text}", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, ListGamesActivity::class.java)

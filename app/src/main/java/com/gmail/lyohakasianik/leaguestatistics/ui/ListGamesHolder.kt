@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.DatabaseIdIcon
 import com.gmail.lyohakasianik.leaguestatistics.R
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
-import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImage
+import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImageMaxi
+import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImageMini
 
 class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -43,7 +44,7 @@ class ListGamesHolder(view: View) : RecyclerView.ViewHolder(view) {
                 R.drawable.pink_shape
             )
         }
-        loadRoundImage(
+        loadRoundImageMaxi(
             itemView.context, getImageUrl(
                 match,
                 (returnPositionSummoner(match, summonerName)) + 1

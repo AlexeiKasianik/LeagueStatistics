@@ -10,7 +10,8 @@ import com.gmail.lyohakasianik.leaguestatistics.databaseIcon.START_INDEX
 import com.gmail.lyohakasianik.leaguestatistics.app.App
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.Match
 import com.gmail.lyohakasianik.leaguestatistics.entity.match.ParticipantIdentitie
-import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImage
+import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImageMaxi
+import com.gmail.lyohakasianik.leaguestatistics.loadimage.loadRoundImageMini
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideGamesIdRepository
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideMatchRepository
 import com.gmail.lyohakasianik.leaguestatistics.repository.provideSummonerRepository
@@ -224,7 +225,7 @@ class LeagueStatisticsViewModel : ViewModel() {
 
 
         for ((count, item) in listImageView.withIndex()) {
-            loadRoundImage(
+            loadRoundImageMini(
                 context,
                 url + iconIdHashMap.databaseIdIcon[match.participants[count]?.championId] + ".png",
                 item
@@ -239,7 +240,7 @@ class LeagueStatisticsViewModel : ViewModel() {
             if (item.participantId == match.idSummonerInGame)
                 idChamp = item.championId
         }
-        loadRoundImage(
+        loadRoundImageMaxi(
             context,
             url + iconIdHashMap.databaseIdIcon[idChamp] + ".png",
             imageView

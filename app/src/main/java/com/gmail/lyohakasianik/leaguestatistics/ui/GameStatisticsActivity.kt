@@ -1,6 +1,7 @@
 package com.gmail.lyohakasianik.leaguestatistics.ui
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
@@ -14,6 +15,7 @@ import com.gmail.lyohakasianik.leaguestatistics.mvvm.MVVMState
 
 import kotlinx.android.synthetic.main.layout_game_statistics.*
 
+
 class GameStatisticsActivity : FragmentActivity() {
 
     private lateinit var viewModel: LeagueStatisticsViewModel
@@ -22,7 +24,6 @@ class GameStatisticsActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_game_statistics)
-
         viewModel = ViewModelProviders.of(this).get(LeagueStatisticsViewModel::class.java)
 
         val idAndName: List<String> = intent.getStringExtra("id").split(",")
@@ -37,6 +38,7 @@ class GameStatisticsActivity : FragmentActivity() {
             when (it) {
                 is MVVMState.Data -> {
                     getInform(it.listMatch[0])
+
                 }
             }
         })
@@ -191,7 +193,7 @@ class GameStatisticsActivity : FragmentActivity() {
         textViewStatisticGameDeathNine.text = match.participants[8]!!.stats!!.deaths.toString()
         textViewStatisticGameDeathTen.text = match.participants[9]!!.stats!!.deaths.toString()
 
-        textViewStatisticGameAssistsOne.text = match.participants[0]!!.stats!!.assists.toString()
+        textViewStatisticGameAssistsOne.text = match.participants[0]?.stats!!.assists.toString()
         textViewStatisticGameAssistsTwo.text = match.participants[1]!!.stats!!.assists.toString()
         textViewStatisticGameAssistsThree.text = match.participants[2]!!.stats!!.assists.toString()
         textViewStatisticGameAssistsFour.text = match.participants[3]!!.stats!!.assists.toString()
