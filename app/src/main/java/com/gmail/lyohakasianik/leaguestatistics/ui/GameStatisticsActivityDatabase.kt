@@ -2,7 +2,6 @@ package com.gmail.lyohakasianik.leaguestatistics.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
@@ -48,6 +47,8 @@ class GameStatisticsActivityDatabase : FragmentActivity() {
             startActivity(intent)
         }
     }
+
+    //Realm removed some annotations for kotlin, for this reason everywhere !!
 
     private fun getInform(match: Match) {
         textViewStatisticGameScore.text = viewModel.returnKDASlash(match)

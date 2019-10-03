@@ -2,6 +2,8 @@ package com.gmail.lyohakasianik.leaguestatistics.databaseIcon
 
 class DatabaseIdIcon {
 
+    // Temporary solution. In general, each entry in the HashMap should be a separate class.
+
     val databaseIdIcon: HashMap<Int, String> =
         hashMapOf(
             266 to "Aatrox",

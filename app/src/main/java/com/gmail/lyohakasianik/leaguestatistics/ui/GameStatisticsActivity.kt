@@ -53,6 +53,7 @@ class GameStatisticsActivity : FragmentActivity() {
         }
     }
 
+    //Realm removed some annotations for kotlin, for this reason everywhere !!
 
     private fun getInform(match: Match) {
         textViewStatisticGameScore.text = viewModel.returnKDASlash(match)
